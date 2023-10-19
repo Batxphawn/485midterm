@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ExitDoor : MonoBehaviour
 {
@@ -48,6 +49,10 @@ public class ExitDoor : MonoBehaviour
         if (other.tag == "Player")
         {
             CloseDoor();
+            if (SceneManager.GetActiveScene().name == "Scene 2 - Collect Only") {
+                Application.LoadLevel(3);
+            }
+
         }
     }
 
