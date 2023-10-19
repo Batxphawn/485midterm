@@ -22,17 +22,7 @@ public class scoreKeeper : MonoBehaviour
 
     void Update()
     {
-        colText.text = "Hyper cubes: " + collectableScore.ToString();
-        eneText.text = "Remaining: " + remaining.ToString();
-        if (totalScore >= 0 && totalScore < 100)
-            totalText.text = "Score: " + totalScore.ToString();
-        /*   if (totalScore < 0)
-                 totalText.text = "DEFEAT";
-             if (totalScore == 100)
-                 totalText.text = "VICTORY";
-        */
-        if (totalScore == 20)
-            totalText.text = "VICTORY";
+        sceneThreeUpdate();
     }
 
     public void colScore()
@@ -72,9 +62,16 @@ public class scoreKeeper : MonoBehaviour
             return false;
         }
     }
-    public bool sceneThreeSuccess()
+    public void sceneThreeUpdate()
     {
-        if (totalScore == 100) { return true; }
-        return false;
+        colText.text = "Hyper cubes: " + collectableScore.ToString();
+        eneText.text = "Enemies: " + enemyCount.ToString();
+        if (totalScore >= 0 && totalScore < 100)
+            totalText.text = "Score: " + totalScore.ToString();
+        if (totalScore < 0)
+            totalText.text = "DEFEAT";
+        if (totalScore == 100)
+            totalText.text = "VICTORY";
+
     }
 }
