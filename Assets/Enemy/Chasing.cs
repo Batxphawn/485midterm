@@ -71,6 +71,14 @@ public class Chasing : MonoBehaviour {
 	{
 		rbody.AddForce(Vector3.up * Mathf.Sqrt(jumpHeight * -2f * Physics.gravity.y), ForceMode.VelocityChange);
     }
+    public void notActive()
+    {
+        transform.gameObject.SetActive(false);
+    }
+    public void isActive()
+    {
+        transform.gameObject.SetActive(true);
+    }
 }
 
 
