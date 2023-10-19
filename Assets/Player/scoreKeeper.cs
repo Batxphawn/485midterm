@@ -72,4 +72,9 @@ public class scoreKeeper : MonoBehaviour
             return false;
         }
     }
+    public bool sceneThreeSuccess()
+    {
+        if (totalScore == 100) { return true; }
+        return false;
+    }
 }
