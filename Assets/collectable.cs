@@ -6,6 +6,7 @@ public class collectable : MonoBehaviour
 {
     public float rotationSpeed = 3f;   // Collectable rotation speed
     Vector3 collectablePos;
+    public UnityEngine.Events.UnityEvent spawner;
 
     private GameObject Player;
 
@@ -27,8 +28,9 @@ public class collectable : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            transform.gameObject.SetActive(false);
             scoreKeeper.instance.colScore();
+            spawner.Invoke();
+            transform.gameObject.SetActive(false);
         }
     }
     public void notActive()

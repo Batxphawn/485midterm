@@ -26,11 +26,11 @@ public class scoreKeeper : MonoBehaviour
         eneText.text = "Remaining: " + remaining.ToString();
         if (totalScore >= 0 && totalScore < 100)
             totalText.text = "Score: " + totalScore.ToString();
-   /*   if (totalScore < 0)
-            totalText.text = "DEFEAT";
-        if (totalScore == 100)
-            totalText.text = "VICTORY";
-   */
+        /*   if (totalScore < 0)
+                 totalText.text = "DEFEAT";
+             if (totalScore == 100)
+                 totalText.text = "VICTORY";
+        */
         if (totalScore == 20)
             totalText.text = "VICTORY";
     }
@@ -61,7 +61,15 @@ public class scoreKeeper : MonoBehaviour
 
     public bool colSuccess()
     {
-        if (remaining == 0) {  return true; }
+        if (remaining == 0) { return true; }
         return false;
+    }
+    public bool firstCol()
+    {
+        if (collectableScore > 0) { return true; }
+        else
+        {
+            return false;
+        }
     }
 }
