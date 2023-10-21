@@ -8,7 +8,7 @@ public class scoreKeeper : MonoBehaviour
     public static scoreKeeper instance;
     public int collectableScore = 0;
     public int totalScore = 0;
-    public int enemyCount = 4;
+    public int enemyCount = -1;
     public int remaining = 4;
     public TextMeshProUGUI colText;
     public TextMeshProUGUI eneText;
@@ -23,7 +23,7 @@ public class scoreKeeper : MonoBehaviour
 
     void Update()
     {
-        sceneThreeUpdate();
+        sceneUpdate();
     }
 
     public void colScore()
@@ -52,7 +52,9 @@ public class scoreKeeper : MonoBehaviour
 
     public bool colSuccess()
     {
-        if (remaining == 0) { return true; }
+        if (remaining == 0 || totalScore == 100) { 
+            return true; 
+        }
         return false;
     }
     public bool firstCol()
@@ -63,20 +65,23 @@ public class scoreKeeper : MonoBehaviour
             return false;
         }
     }
-    public void sceneThreeUpdate()
+    public void sceneUpdate()
     {
         colText.text = "Hyper cubes: " + collectableScore.ToString();
-        if (enemyCount > 0)
+        if (enemyCount >= 0)
         {
             eneText.text = "Enemies: " + enemyCount.ToString();
         }
-        remText.text = "Remaing: " + remaining.ToString();
+        if (remaining > 0)
+            remText.text = "Remaing: " + remaining.ToString();
         if (totalScore >= 0 && totalScore < 100)
             totalText.text = "Score: " + totalScore.ToString();
         if (totalScore < 0)
             totalText.text = "DEFEAT";
-        if (totalScore == 100)
+        if ((totalScore == 20 && collectableScore == 4 && enemyCount == -1) || totalScore == 100)
+        {
             totalText.text = "VICTORY";
+        }
 
     }
     private void OnTriggerEnter(Collider other)

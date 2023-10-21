@@ -80,7 +80,7 @@ public class Chasing : MonoBehaviour {
     }
     public void isActive()
     {
-		if (scoreKeeper.instance.firstCol() == true || scoreKeeperTwo.instance.firstCol())
+		if (scoreKeeper.instance.firstCol() == true)
 		{
 			transform.gameObject.SetActive(true);
 		}

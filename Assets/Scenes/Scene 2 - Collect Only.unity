@@ -4363,7 +4363,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collectableScore: 0
   totalScore: 0
-  enemyCount: 0
+  enemyCount: -1
   remaining: 4
   colText: {fileID: 899326767}
   eneText: {fileID: 0}
