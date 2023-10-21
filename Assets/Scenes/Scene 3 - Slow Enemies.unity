@@ -3150,7 +3150,7 @@ Transform:
   m_GameObject: {fileID: 857063421}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.65, y: 0, z: 91.22}
+  m_LocalPosition: {x: 2.45, y: 4.43, z: 88.92}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6160,6 +6160,7 @@ MonoBehaviour:
   remaining: 4
   colText: {fileID: 899326767}
   eneText: {fileID: 2043455551}
+  remText: {fileID: 0}
   totalText: {fileID: 65439460}
 --- !u!1001 &1796966260
 PrefabInstance:
