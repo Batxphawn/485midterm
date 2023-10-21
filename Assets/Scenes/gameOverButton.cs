@@ -5,17 +5,17 @@ using UnityEngine.UI;
 
 public class gameOverButton : MonoBehaviour
 {
-    public Button returnToMenuButton; // Reference to the Button component
+    public Button returnToMenuButton; 
     private bool buttonVisible = false;
 
     private void Start()
     {
-        returnToMenuButton.gameObject.SetActive(false); // Disable the entire button GameObject
+        returnToMenuButton.gameObject.SetActive(false); 
     }
 
     public void ShowButton()
     {
-        returnToMenuButton.gameObject.SetActive(true); // Enable the entire button GameObject
+        returnToMenuButton.gameObject.SetActive(true); 
         buttonVisible = true;
     }
 
