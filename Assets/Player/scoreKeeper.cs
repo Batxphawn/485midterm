@@ -72,7 +72,7 @@ public class scoreKeeper : MonoBehaviour
         {
             eneText.text = "Enemies: " + enemyCount.ToString();
         }
-        if (remaining > 0)
+        if (remaining >= 0)
             remText.text = "Remaing: " + remaining.ToString();
         if (totalScore >= 0 && totalScore < 100)
             totalText.text = "Score: " + totalScore.ToString();
