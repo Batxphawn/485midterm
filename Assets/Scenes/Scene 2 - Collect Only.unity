@@ -2487,6 +2487,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationSpeed: 2
+  spawner:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &899326765
 GameObject:
   m_ObjectHideFlags: 0
@@ -3513,6 +3516,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationSpeed: 2
+  spawner:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1287400412 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 5d2e4237b4429b34fae4c9eb3cd9efd5, type: 3}
@@ -3531,6 +3537,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationSpeed: 2
+  spawner:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1371956528
 GameObject:
   m_ObjectHideFlags: 0
@@ -4340,7 +4349,7 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3812944683217350546, guid: e8bbbff5195f87a45a4f45c2931fc300, type: 3}
   m_PrefabInstance: {fileID: 3812944682531601311}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1776342043
+--- !u!114 &1776342037
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4354,10 +4363,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collectableScore: 0
   totalScore: 0
-  enemyCount: 4
+  enemyCount: 0
   remaining: 4
   colText: {fileID: 899326767}
-  eneText: {fileID: 2043455551}
+  eneText: {fileID: 0}
+  remText: {fileID: 2043455551}
   totalText: {fileID: 65439460}
 --- !u!1001 &1796966260
 PrefabInstance:
@@ -5456,7 +5466,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 3
+  m_Radius: 6
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &2047230244
 MonoBehaviour:
@@ -5530,7 +5540,7 @@ Transform:
   m_GameObject: {fileID: 2047230242}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.65, y: 0, z: 92.15}
+  m_LocalPosition: {x: 0.65, y: 0, z: 91.31}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5562,7 +5572,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 2b127815fd0f2074eae3a0c6a4786d0b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 2b127815fd0f2074eae3a0c6a4786d0b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5645,6 +5655,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationSpeed: 2
+  spawner:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &2132405602
 GameObject:
   m_ObjectHideFlags: 0
@@ -5817,7 +5830,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 3812944681993599482, guid: e8bbbff5195f87a45a4f45c2931fc300, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1776342043}
+      addedObject: {fileID: 1776342037}
   m_SourcePrefab: {fileID: 100100000, guid: e8bbbff5195f87a45a4f45c2931fc300, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
