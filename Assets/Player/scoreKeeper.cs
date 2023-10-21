@@ -84,18 +84,4 @@ public class scoreKeeper : MonoBehaviour
         }
 
     }
-    private void OnTriggerEnter(Collider other)
-    {
-        if ((other.tag == "next"))
-        {
-            onGUI();
-        }
-    }
-    void onGUI()
-    {
-        if (GUI.Button(new Rect(600, 400, 100, 50), "Next Level"))
-        {
-            Application.LoadLevel(3);
-        }
-    }
 }
