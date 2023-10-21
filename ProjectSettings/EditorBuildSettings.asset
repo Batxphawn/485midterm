@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Scene 3 - Slow Enemies.unity
     guid: cd529c3b33dbb7c48aaf5347fbca8980
+  - enabled: 1
+    path: Assets/Scenes/Scene 4 - AI Enemies.unity
+    guid: 3460056a04aec6048bc90acaf583baf9
   m_configObjects: {}

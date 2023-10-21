@@ -16,6 +16,7 @@ public class Chasing : MonoBehaviour {
 
 	private Text healText;
 	private Image healBar;
+	public gameOverButton gameOverButton;
 
 	// Use this for initialization
 	void Start () {
@@ -58,6 +59,8 @@ public class Chasing : MonoBehaviour {
             Destroy(this);
             Instantiate(explostion, transform.position, transform.rotation);
             Destroy(gameObject);
+
+			gameOverButton.ShowButton();
         }
     }
     private void OnTriggerEnter(Collider col)
