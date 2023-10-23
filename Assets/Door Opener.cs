@@ -25,7 +25,8 @@ public class DoorOpener : MonoBehaviour
         if (open)
         {
             door.position = Vector3.Lerp(door.position,
-            openedPosition, Time.deltaTime * openSpeed);
+                openedPosition, Time.deltaTime * openSpeed);
+            Debug.Log("PLAYER WENT THROUGH THE DOOR");
         }
         else
         {
@@ -39,7 +40,6 @@ public class DoorOpener : MonoBehaviour
         if (other.tag == "Player")
         {
             OpenDoor();
-            Debug.Log("PLAYER WENT THROUGH THE DOOR");
         }
     }
 
