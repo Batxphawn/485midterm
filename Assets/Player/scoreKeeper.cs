@@ -54,7 +54,11 @@ public class scoreKeeper : MonoBehaviour
     }
     public void hit()
     {
-        totalScore -= 100;
+        totalScore -= 101;
+        for(int i = 0; i < EnemyList.Count; i++)
+        {
+            EnemyList[i].SetActive(false);
+        }
     }
 
     public bool colSuccess()
