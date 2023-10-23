@@ -25,14 +25,15 @@ public class SimpleFSM : FSM
 
     //Whether the NPC is destroyed or not
     private bool bDead;
-    private int health;
-    private int maxHealth;
+    private float health;
+    private float maxHealth;
     private Text healText;
 	private Image healBar;
     private Rigidbody rbody;
     public GameObject explostion;
     public float jumpHeight = 3f;
     public Material angry;
+    public gameOverButton gb;
 
 
     //Initialize the Finite state machine for the NPC tank
@@ -44,7 +45,7 @@ public class SimpleFSM : FSM
         bDead = false;
         elapsedTime = 0.0f;
         shootRate = 3.0f;
-        health = 50;
+        health = 50f;
         maxHealth = health;
 
         healText = transform.Find("EnemyCanvas").Find("HealthBarText").GetComponent<Text>();
@@ -207,7 +208,16 @@ public class SimpleFSM : FSM
         {
 			health -= 10;
 		}
+        if (col.gameObject.tag == "Player")
+		{
+            scoreKeeper.instance.hit();
+            Instantiate(explostion, transform.position, transform.rotation);
+
+			gb.ShowButton();
+			Destroy(this);
+        }
     } 
+
     private void OnTriggerEnter(Collider col)
     {
         if (col.tag == "object")
@@ -255,6 +265,8 @@ public class SimpleFSM : FSM
     protected void Explode()
     {
         scoreKeeper.instance.enemyDown();
+
+        scoreKeeper.instance.EnemyList.Remove(transform.gameObject);
 
         float rndX = Random.Range(10.0f, 30.0f);
         float rndZ = Random.Range(10.0f, 30.0f);

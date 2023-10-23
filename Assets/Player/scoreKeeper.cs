@@ -14,7 +14,7 @@ public class scoreKeeper : MonoBehaviour
     public TextMeshProUGUI eneText;
     public TextMeshProUGUI remText;
     public TextMeshProUGUI totalText;
-    private List<GameObject> EnemyList = new List<GameObject>();
+    public List<GameObject> EnemyList = new List<GameObject>();
     private List<GameObject> CollectableList = new List<GameObject>();
     private bool manicState = false;
 
@@ -78,7 +78,10 @@ public class scoreKeeper : MonoBehaviour
         {
             for(int i = 0; i < EnemyList.Count; i++)
             {
-                EnemyList[i].GetComponent<SimpleFSM>().SwapToManic();
+                if(EnemyList[i].GetComponent<SimpleFSM>() != null)
+                {
+                    EnemyList[i].GetComponent<SimpleFSM>().SwapToManic();
+                }
             }
             manicState = true;
         }

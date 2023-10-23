@@ -56,23 +56,18 @@ public class Chasing : MonoBehaviour {
         if (col.gameObject.tag == "Player")
 		{
             scoreKeeper.instance.hit();
-            Destroy(this);
             Instantiate(explostion, transform.position, transform.rotation);
-            Destroy(gameObject);
 
 			gameOverButton.ShowButton();
+			Destroy(this);
         }
     }
     private void OnTriggerEnter(Collider col)
     {
         if (col.tag == "object")
         {
-            jump();
+            rbody.AddForce(Vector3.up * Mathf.Sqrt(jumpHeight * -2f * Physics.gravity.y), ForceMode.VelocityChange);
         }
-    }
-	void jump()
-	{
-		rbody.AddForce(Vector3.up * Mathf.Sqrt(jumpHeight * -2f * Physics.gravity.y), ForceMode.VelocityChange);
     }
     public void notActive()
     {
