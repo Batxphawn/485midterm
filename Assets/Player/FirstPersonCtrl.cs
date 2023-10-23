@@ -64,7 +64,7 @@ public class FirstPersonCtrl : MonoBehaviour
             bulletPrefab,
             bulletSpawn.position,
             bulletSpawn.rotation);
-        bullet.GetComponent<Rigidbody>().velocity = bullet.transform.forward * 12;
-        Destroy(bullet, 2.0f);
+        bullet.GetComponent<Rigidbody>().velocity = bullet.transform.forward * 36;
+        Destroy(bullet, 3.0f);
     }
 }

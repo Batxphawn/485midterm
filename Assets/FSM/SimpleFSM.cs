@@ -291,5 +291,15 @@ public class SimpleFSM : FSM
         curSpeed = 10f;
         GetComponent<Renderer>().material = angry;
     }
-
+    public void notActive()
+    {
+        transform.gameObject.SetActive(false);
+    }
+    public void isActive()
+    {
+        if (scoreKeeper.instance.firstCol() == true)
+        {
+            transform.gameObject.SetActive(true);
+        }
+    }
 }
