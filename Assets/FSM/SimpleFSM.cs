@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class SimpleFSM : FSM 
 {
@@ -9,6 +10,7 @@ public class SimpleFSM : FSM
         Patrol,
         Chase,
         Stare,
+        Manic,
         Dead,
     }
 
@@ -24,7 +26,12 @@ public class SimpleFSM : FSM
     //Whether the NPC is destroyed or not
     private bool bDead;
     private int health;
+    private int maxHealth;
+    private Text healText;
+	private Image healBar;
+    private Rigidbody rbody;
     public GameObject explostion;
+    public float jumpHeight = 3f;
 
 
     //Initialize the Finite state machine for the NPC tank
@@ -37,6 +44,11 @@ public class SimpleFSM : FSM
         elapsedTime = 0.0f;
         shootRate = 3.0f;
         health = 50;
+        maxHealth = health;
+
+        healText = transform.Find("EnemyCanvas").Find("HealthBarText").GetComponent<Text>();
+		healBar = transform.Find("EnemyCanvas").Find("MaxHealthBar").Find("HealthBar").GetComponent<Image>();
+        rbody = GetComponent<Rigidbody>();
 
         //Get the list of points
         pointList = GameObject.FindGameObjectsWithTag("WandarPoint");
@@ -60,6 +72,7 @@ public class SimpleFSM : FSM
             case FSMState.Patrol: UpdatePatrolState(); break;
             case FSMState.Chase: UpdateChaseState(); break;
             case FSMState.Stare: UpdateStareState(); break;
+            case FSMState.Manic: UpdateManicState(); break;
             case FSMState.Dead: UpdateDeadState(); break;
         }
 
@@ -76,7 +89,9 @@ public class SimpleFSM : FSM
     /// </summary>
     protected void UpdatePatrolState()
     {
-        float dist = Vector3.Distance(transform.position, playerTransform.position);
+        UpdateHealth();
+        
+        float dist = Vector3.Distance(destPos, playerTransform.position);
         //Find another random patrol point if the current point is reached
         if (dist <= 10.0f)
         {
@@ -104,13 +119,14 @@ public class SimpleFSM : FSM
     /// </summary>
     protected void UpdateStareState()
     {
+        UpdateHealth();
+
         //Rotate to the target point
         Quaternion targetRotation = Quaternion.LookRotation(playerTransform.position - transform.position);
         transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * curRotSpeed);
 
 
         float dist = Vector3.Distance(transform.position, playerTransform.position);
-        Debug.Log("Dist: " + dist);
         if (dist <= 20.0f)
         {
             print("Switch to Chase Position");
@@ -128,6 +144,8 @@ public class SimpleFSM : FSM
     /// </summary>
     protected void UpdateChaseState()
     {
+        UpdateHealth();
+
         //Set the target position as the player position
         destPos = playerTransform.position;
 
@@ -138,6 +156,24 @@ public class SimpleFSM : FSM
         {
             curState = FSMState.Patrol;
         }
+
+        //Rotate to the target point
+        Quaternion targetRotation = Quaternion.LookRotation(destPos - transform.position);
+        transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * curRotSpeed);  
+
+        //Go Forward
+        transform.Translate(Vector3.forward * Time.deltaTime * curSpeed);
+    }
+    /// <summary>
+    /// Manic state
+    /// </summary>
+    protected void UpdateManicState()
+    {
+        curSpeed = 12f;
+        UpdateHealth();
+
+        //Set the target position as the player position
+        destPos = playerTransform.position;
 
         //Rotate to the target point
         Quaternion targetRotation = Quaternion.LookRotation(destPos - transform.position);
@@ -179,7 +215,14 @@ public class SimpleFSM : FSM
                 Destroy(this);
             }
 		}
-    }   
+    } 
+    private void OnTriggerEnter(Collider col)
+    {
+        if (col.tag == "object")
+        {
+		    rbody.AddForce(Vector3.up * Mathf.Sqrt(jumpHeight * -2f * Physics.gravity.y), ForceMode.VelocityChange);
+        }
+    }  
 
     /// <summary>
     /// Find the next semi-random patrol point
@@ -189,8 +232,6 @@ public class SimpleFSM : FSM
         print("Finding next point");
         int rndIndex = Random.Range(0, pointList.Length);
         float rndRadius = 10.0f;
-
-        Debug.Log("rndIndex: " + rndIndex);
         
         Vector3 rndPosition = Vector3.zero;
         destPos = pointList[rndIndex].transform.position + rndPosition;
@@ -232,6 +273,16 @@ public class SimpleFSM : FSM
         }
 
         Destroy(gameObject, 1.5f);
+    }
+    private void UpdateHealth()
+    {
+        healText.text = health.ToString();
+		healBar.fillAmount = health / maxHealth;
+    }
+    public void SwapToManic()
+    {
+        print("Entering Manic!!!");
+        curState = FSMState.Manic;
     }
 
 }

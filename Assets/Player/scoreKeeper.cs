@@ -14,16 +14,23 @@ public class scoreKeeper : MonoBehaviour
     public TextMeshProUGUI eneText;
     public TextMeshProUGUI remText;
     public TextMeshProUGUI totalText;
+    private List<GameObject> EnemyList = new List<GameObject>();
+    private List<GameObject> CollectableList = new List<GameObject>();
+    private bool manicState = false;
 
     // Update is called once per frame
     private void Awake()
     {
         instance = this;
+
+        foreach(GameObject fooObj in GameObject.FindGameObjectsWithTag("Enemy")) {EnemyList.Add(fooObj);}
+        foreach(GameObject fooObj_ in GameObject.FindGameObjectsWithTag("collectable")) {CollectableList.Add(fooObj_);}
     }
 
     void Update()
     {
         sceneUpdate();
+        EnterManicMode();
     }
 
     public void colScore()
@@ -63,6 +70,17 @@ public class scoreKeeper : MonoBehaviour
         else
         {
             return false;
+        }
+    }
+    public void EnterManicMode()
+    {
+        if(collectableScore >= (CollectableList.Count/2) && manicState == false)
+        {
+            for(int i = 0; i < EnemyList.Count; i++)
+            {
+                EnemyList[i].GetComponent<SimpleFSM>().SwapToManic();
+            }
+            manicState = true;
         }
     }
     public void sceneUpdate()

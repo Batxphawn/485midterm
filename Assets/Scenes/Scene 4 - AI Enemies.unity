@@ -4281,7 +4281,7 @@ GameObject:
   - component: {fileID: 1285105074}
   m_Layer: 0
   m_Name: WandarPoint
-  m_TagString: Untagged
+  m_TagString: WandarPoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4295,7 +4295,7 @@ Transform:
   m_GameObject: {fileID: 1285105073}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -20.816423, y: -18.812096, z: -6.140356}
+  m_LocalPosition: {x: 51.5, y: 0.25, z: 37.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5022,6 +5022,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400016, guid: 469edab27ab6d004d84af2c4a851bd7f, type: 3}
   m_PrefabInstance: {fileID: 1493985876}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1511439576
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1511439577}
+  m_Layer: 0
+  m_Name: WandarPoint (3)
+  m_TagString: WandarPoint
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1511439577
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1511439576}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -50.7, y: 0.25, z: 21.8}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1529039878
 GameObject:
   m_ObjectHideFlags: 0
@@ -5836,7 +5867,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!82 &1826591647
 AudioSource:
   m_ObjectHideFlags: 0
@@ -6102,6 +6133,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400016, guid: 469edab27ab6d004d84af2c4a851bd7f, type: 3}
   m_PrefabInstance: {fileID: 1849033677}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1893201391
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1893201392}
+  m_Layer: 0
+  m_Name: WandarPoint (2)
+  m_TagString: WandarPoint
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1893201392
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1893201391}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 24, y: 0.25, z: -26}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1921971989
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7149,6 +7211,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 5d2e4237b4429b34fae4c9eb3cd9efd5, type: 3}
   m_PrefabInstance: {fileID: 1837869030}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2087023247
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2087023248}
+  m_Layer: 0
+  m_Name: WandarPoint (1)
+  m_TagString: WandarPoint
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2087023248
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2087023247}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -8.4, y: 0.25, z: -22.6}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2088717175
 GameObject:
   m_ObjectHideFlags: 0
@@ -7506,7 +7599,7 @@ GameObject:
   - component: {fileID: 136596507806196047}
   m_Layer: 0
   m_Name: Enemy-FSM
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7782,8 +7875,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   curState: 0
-  Bullet: {fileID: 0}
   explostion: {fileID: 100010, guid: 031d08f52af1daa4f929b85221519426, type: 3}
+  jumpHeight: 3
 --- !u!1001 &3812944682531601311
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7794,7 +7887,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3812944681993599481, guid: e8bbbff5195f87a45a4f45c2931fc300, type: 3}
       propertyPath: speed
-      value: 6
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 3812944681993599481, guid: e8bbbff5195f87a45a4f45c2931fc300, type: 3}
       propertyPath: ground.m_Bits
@@ -7875,4 +7968,7 @@ SceneRoots:
   - {fileID: 681560276}
   - {fileID: 1550044089}
   - {fileID: 1285105074}
+  - {fileID: 2087023248}
+  - {fileID: 1893201392}
+  - {fileID: 1511439577}
   - {fileID: 8712640}

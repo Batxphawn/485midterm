@@ -11,6 +11,7 @@ TagManager:
   - door
   - next
   - WandarPoint
+  - Enemy
   layers:
   - Default
   - TransparentFX
