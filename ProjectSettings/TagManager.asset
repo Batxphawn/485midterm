@@ -10,6 +10,7 @@ TagManager:
   - collectable
   - door
   - next
+  - WandarPoint
   layers:
   - Default
   - TransparentFX
