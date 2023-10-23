@@ -59,6 +59,10 @@ public class scoreKeeper : MonoBehaviour
         {
             EnemyList[i].SetActive(false);
         }
+        for (int i = 0; i < CollectableList.Count; i++)
+        {
+            CollectableList[i].SetActive(false);
+        }
     }
 
     public bool colSuccess()
