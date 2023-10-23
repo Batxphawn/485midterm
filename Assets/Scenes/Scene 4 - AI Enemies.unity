@@ -7877,6 +7877,7 @@ MonoBehaviour:
   curState: 0
   explostion: {fileID: 100010, guid: 031d08f52af1daa4f929b85221519426, type: 3}
   jumpHeight: 3
+  angry: {fileID: 2100000, guid: e4541a3409f7e0e49a4d69a9492c8f6e, type: 2}
 --- !u!1001 &3812944682531601311
 PrefabInstance:
   m_ObjectHideFlags: 0

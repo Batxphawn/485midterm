@@ -32,13 +32,14 @@ public class SimpleFSM : FSM
     private Rigidbody rbody;
     public GameObject explostion;
     public float jumpHeight = 3f;
+    public Material angry;
 
 
     //Initialize the Finite state machine for the NPC tank
 	protected override void Initialize () 
     {
         curState = FSMState.Patrol;
-        curSpeed = 10.0f;
+        curSpeed = 7.0f;
         curRotSpeed = 2.0f;
         bDead = false;
         elapsedTime = 0.0f;
@@ -169,7 +170,6 @@ public class SimpleFSM : FSM
     /// </summary>
     protected void UpdateManicState()
     {
-        curSpeed = 12f;
         UpdateHealth();
 
         //Set the target position as the player position
@@ -206,14 +206,6 @@ public class SimpleFSM : FSM
 		if(col.gameObject.tag == "Bullet")
         {
 			health -= 10;
-			if(health < 1)
-            {
-				Instantiate(explostion, transform.position, transform.rotation);
-                scoreKeeper.instance.enemyDown();
-                
-                Destroy(col.gameObject);
-                Destroy(this);
-            }
 		}
     } 
     private void OnTriggerEnter(Collider col)
@@ -283,6 +275,9 @@ public class SimpleFSM : FSM
     {
         print("Entering Manic!!!");
         curState = FSMState.Manic;
+
+        curSpeed = 10f;
+        GetComponent<Renderer>().material = angry;
     }
 
 }
