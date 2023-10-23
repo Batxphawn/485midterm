@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1674,6 +1674,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6293283695388525248, guid: 86ba28691b075994098115d293e85898, type: 3}
   m_PrefabInstance: {fileID: 288345204}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &496203597 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4878099018391223147, guid: 86ba28691b075994098115d293e85898, type: 3}
+  m_PrefabInstance: {fileID: 288345204}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 189da2cf6d2cf7a40b5613f3871027da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &499715297 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 080bc076ed19adb4091adca05de83d66, type: 3}
@@ -1961,6 +1972,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6293283695388525248, guid: 86ba28691b075994098115d293e85898, type: 3}
   m_PrefabInstance: {fileID: 322210966}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &650888152 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4878099018391223147, guid: 86ba28691b075994098115d293e85898, type: 3}
+  m_PrefabInstance: {fileID: 322210966}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 189da2cf6d2cf7a40b5613f3871027da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &653453120
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2752,7 +2774,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 3
+  m_Radius: 8
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &857063423
 MonoBehaviour:
@@ -2817,8 +2839,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Chasing, Assembly-CSharp
+      - m_Target: {fileID: 4882812038420861}
+        m_TargetAssemblyTypeName: SimpleFSM, Assembly-CSharp
         m_MethodName: notActive
         m_Mode: 1
         m_Arguments:
@@ -2829,8 +2851,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Chasing, Assembly-CSharp
+      - m_Target: {fileID: 650888152}
+        m_TargetAssemblyTypeName: SimpleFSM, Assembly-CSharp
         m_MethodName: notActive
         m_Mode: 1
         m_Arguments:
@@ -2841,8 +2863,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Chasing, Assembly-CSharp
+      - m_Target: {fileID: 1136490411}
+        m_TargetAssemblyTypeName: SimpleFSM, Assembly-CSharp
         m_MethodName: notActive
         m_Mode: 1
         m_Arguments:
@@ -2853,8 +2875,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Chasing, Assembly-CSharp
+      - m_Target: {fileID: 496203597}
+        m_TargetAssemblyTypeName: SimpleFSM, Assembly-CSharp
         m_MethodName: notActive
         m_Mode: 1
         m_Arguments:
@@ -2901,8 +2923,8 @@ MonoBehaviour:
   spawner:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Chasing, Assembly-CSharp
+      - m_Target: {fileID: 4882812038420861}
+        m_TargetAssemblyTypeName: SimpleFSM, Assembly-CSharp
         m_MethodName: isActive
         m_Mode: 1
         m_Arguments:
@@ -2913,8 +2935,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Chasing, Assembly-CSharp
+      - m_Target: {fileID: 650888152}
+        m_TargetAssemblyTypeName: SimpleFSM, Assembly-CSharp
         m_MethodName: isActive
         m_Mode: 1
         m_Arguments:
@@ -2925,8 +2947,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Chasing, Assembly-CSharp
+      - m_Target: {fileID: 1136490411}
+        m_TargetAssemblyTypeName: SimpleFSM, Assembly-CSharp
         m_MethodName: isActive
         m_Mode: 1
         m_Arguments:
@@ -2937,8 +2959,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Chasing, Assembly-CSharp
+      - m_Target: {fileID: 496203597}
+        m_TargetAssemblyTypeName: SimpleFSM, Assembly-CSharp
         m_MethodName: isActive
         m_Mode: 1
         m_Arguments:
@@ -3865,6 +3887,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6293283695388525248, guid: 86ba28691b075994098115d293e85898, type: 3}
   m_PrefabInstance: {fileID: 828036852}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1136490411 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4878099018391223147, guid: 86ba28691b075994098115d293e85898, type: 3}
+  m_PrefabInstance: {fileID: 828036852}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 189da2cf6d2cf7a40b5613f3871027da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1149753001
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3951,8 +3984,8 @@ MonoBehaviour:
   spawner:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Chasing, Assembly-CSharp
+      - m_Target: {fileID: 4882812038420861}
+        m_TargetAssemblyTypeName: SimpleFSM, Assembly-CSharp
         m_MethodName: isActive
         m_Mode: 1
         m_Arguments:
@@ -3963,8 +3996,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Chasing, Assembly-CSharp
+      - m_Target: {fileID: 650888152}
+        m_TargetAssemblyTypeName: SimpleFSM, Assembly-CSharp
         m_MethodName: isActive
         m_Mode: 1
         m_Arguments:
@@ -3975,8 +4008,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Chasing, Assembly-CSharp
+      - m_Target: {fileID: 1136490411}
+        m_TargetAssemblyTypeName: SimpleFSM, Assembly-CSharp
         m_MethodName: isActive
         m_Mode: 1
         m_Arguments:
@@ -3987,8 +4020,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Chasing, Assembly-CSharp
+      - m_Target: {fileID: 496203597}
+        m_TargetAssemblyTypeName: SimpleFSM, Assembly-CSharp
         m_MethodName: isActive
         m_Mode: 1
         m_Arguments:
@@ -4056,8 +4089,8 @@ MonoBehaviour:
   spawner:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Chasing, Assembly-CSharp
+      - m_Target: {fileID: 4882812038420861}
+        m_TargetAssemblyTypeName: SimpleFSM, Assembly-CSharp
         m_MethodName: isActive
         m_Mode: 1
         m_Arguments:
@@ -4068,8 +4101,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Chasing, Assembly-CSharp
+      - m_Target: {fileID: 650888152}
+        m_TargetAssemblyTypeName: SimpleFSM, Assembly-CSharp
         m_MethodName: isActive
         m_Mode: 1
         m_Arguments:
@@ -4080,8 +4113,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Chasing, Assembly-CSharp
+      - m_Target: {fileID: 1136490411}
+        m_TargetAssemblyTypeName: SimpleFSM, Assembly-CSharp
         m_MethodName: isActive
         m_Mode: 1
         m_Arguments:
@@ -4092,8 +4125,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Chasing, Assembly-CSharp
+      - m_Target: {fileID: 496203597}
+        m_TargetAssemblyTypeName: SimpleFSM, Assembly-CSharp
         m_MethodName: isActive
         m_Mode: 1
         m_Arguments:
@@ -6626,8 +6659,8 @@ MonoBehaviour:
   spawner:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Chasing, Assembly-CSharp
+      - m_Target: {fileID: 4882812038420861}
+        m_TargetAssemblyTypeName: SimpleFSM, Assembly-CSharp
         m_MethodName: isActive
         m_Mode: 1
         m_Arguments:
@@ -6638,8 +6671,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Chasing, Assembly-CSharp
+      - m_Target: {fileID: 650888152}
+        m_TargetAssemblyTypeName: SimpleFSM, Assembly-CSharp
         m_MethodName: isActive
         m_Mode: 1
         m_Arguments:
@@ -6650,8 +6683,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Chasing, Assembly-CSharp
+      - m_Target: {fileID: 1136490411}
+        m_TargetAssemblyTypeName: SimpleFSM, Assembly-CSharp
         m_MethodName: isActive
         m_Mode: 1
         m_Arguments:
@@ -6662,8 +6695,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Chasing, Assembly-CSharp
+      - m_Target: {fileID: 496203597}
+        m_TargetAssemblyTypeName: SimpleFSM, Assembly-CSharp
         m_MethodName: isActive
         m_Mode: 1
         m_Arguments:
@@ -6890,6 +6923,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6293283695388525248, guid: 86ba28691b075994098115d293e85898, type: 3}
   m_PrefabInstance: {fileID: 3792071423126826792}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &4882812038420861 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4878099018391223147, guid: 86ba28691b075994098115d293e85898, type: 3}
+  m_PrefabInstance: {fileID: 3792071423126826792}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 189da2cf6d2cf7a40b5613f3871027da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &3792071423126826792
 PrefabInstance:
   m_ObjectHideFlags: 0
